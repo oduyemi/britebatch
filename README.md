@@ -104,14 +104,21 @@ json
 
 BriteBatch API uses standard HTTP status codes to indicate the success or failure of a request. Common status codes include:
 
-`200 OK
+200 OK
+
 201 Created
+
 400 Bad Request
+
 401 Unauthorized
+
 404 Not Found
+
 500 Internal Server Error
+
 Error Response Format
-Error responses include a JSON object providing details about the error.`
+
+Error responses include a JSON object providing details about the error.
 
 Example:
 
