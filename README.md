@@ -32,6 +32,7 @@ Authentication to the BriteBatch API is performed via API key. Each request must
 Example:
 
 `http
+
 Copy code
 GET /api/batches HTTP/1.1
 Host: api.britebatch.com
@@ -49,6 +50,7 @@ Create a new batch of products.
 Request Body:
 
 `json
+
 Copy code
 {
   "name": "Batch 123",
