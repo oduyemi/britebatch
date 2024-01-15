@@ -32,6 +32,7 @@ Authentication to the BriteBatch API is performed via API key. Each request must
 Example:
 
 http
+
 `Copy code
 GET /api/batches HTTP/1.1
 Host: api.britebatch.com
@@ -49,6 +50,7 @@ Authorization: ApiKey YOUR_API_KEY`
 Request Body:
 
 json
+
 `Copy code
 {
   "name": "Batch 123",
@@ -61,6 +63,7 @@ Endpoint: GET /api/batches/{batchId}`
 ###### Retrieve details of a specific batch.
 
 ##### 1.3 List Batches
+
 `Endpoint: GET /api/batches`
 
 ###### List all batches.
@@ -90,6 +93,7 @@ Assign roles to users. Only accessible by users with admin privileges.
 Request Body:
 
 json
+
 `{
   "roles": ["admin", "sales"]
 }`
@@ -112,6 +116,7 @@ Error responses include a JSON object providing details about the error.`
 Example:
 
 json
+
 `{
   "error": "InvalidRequest",
   "message": "Invalid batch ID"
@@ -122,6 +127,7 @@ json
 ###### Creating a Batch
 
 http
+
 `POST /api/batches HTTP/1.1
 Host: api.britebatch.com
 Authorization: ApiKey YOUR_API_KEY
@@ -134,6 +140,7 @@ Content-Type: application/json
 
 ###### Fetching Products in a Batch
 http
+
 `GET /api/batches/123/products HTTP/1.1
 Host: api.britebatch.com
 Authorization: ApiKey YOUR_API_KEY
@@ -157,6 +164,7 @@ For endpoints that return a list of items, use pagination to manage large datase
 Example:
 
 http
+
 `GET /api/batches?page=2&pageSize=10 HTTP/1.1`
 
 #### Consistent Naming
