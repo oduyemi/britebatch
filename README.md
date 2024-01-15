@@ -31,9 +31,8 @@ Authentication to the BriteBatch API is performed via API key. Each request must
 
 Example:
 
-`http
-
-Copy code
+http
+`Copy code
 GET /api/batches HTTP/1.1
 Host: api.britebatch.com
 Authorization: ApiKey YOUR_API_KEY`
@@ -43,15 +42,14 @@ Authorization: ApiKey YOUR_API_KEY`
 
 ##### 1.1 Create Batch
 
-Endpoint: POST /api/batches
+`Endpoint: POST /api/batches`
 
-Create a new batch of products.
+###### Create a new batch of products.
 
 Request Body:
 
-`json
-
-Copy code
+json
+`Copy code
 {
   "name": "Batch 123",
   "description": "New products batch",
@@ -60,26 +58,26 @@ Copy code
 1.2 Get Batch Details
 Endpoint: GET /api/batches/{batchId}`
 
-Retrieve details of a specific batch.
+###### Retrieve details of a specific batch.
 
 ##### 1.3 List Batches
 `Endpoint: GET /api/batches`
 
-List all batches.
+###### List all batches.
 
 ##### 2. Products
 
 ##### 2.1 Get Products in Batch
 
-Endpoint: GET /api/batches/{batchId}/products
+`Endpoint: GET /api/batches/{batchId}/products`
 
-Retrieve all products associated with a specific batch.
+###### Retrieve all products associated with a specific batch.
 
 ##### 2.2 Update Product (Sales)
 
 `Endpoint: PUT /api/products/{productId}`
 
-Update product details, typically used for recording sales.
+###### Update product details, typically used for recording sales.
 
 ##### 3. Users
 
