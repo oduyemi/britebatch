@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Objects;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Product {
@@ -16,7 +16,29 @@ public class Product {
     private String name;
     private String description;
 
-    // Getters and Setters
+    @ManyToOne
+    private ProductCategory category;
 
-    // You can also include other methods like equals, hashCode, and toString
+    @ManyToOne
+    private Batch batch;
+
+
+    private Float price;
+    private String img;
+
+    public Product(String name, String description, ProductCategory category, Float price, String img) {
+        this.name = name;
+        this.description = description;
+        this.category = category;
+        this.price = price;
+        this.img = img;
+    }
+
+    public static void main(String[] args) {
+        ProductCategory category = new ProductCategory();
+        category.setName("Bone straight");
+        category.setDescription("Hair that is straight, iron straight, and untangled");
+
+        Product shortie = new Product("Shortie", "8 inches Bone Straight hair", category, 55000.0f, "/assets/images/shortie.jpg");
+    }
 }

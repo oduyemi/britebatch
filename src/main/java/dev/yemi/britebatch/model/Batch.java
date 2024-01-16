@@ -14,14 +14,14 @@ public class Batch {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private Product product;
+    // @ManyToOne
+    // private Product product;
+
+    @OneToMany(mappedBy = "batch", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Product> products = new ArrayList<>();
 
     private Integer quantity;
     private LocalDate manufacturingDate;
     private LocalDate expiryDate;
 
-    // Getters and Setters
-
-    // You can also include other methods like equals, hashCode, and toString
 }
